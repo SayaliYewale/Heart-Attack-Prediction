@@ -100,7 +100,7 @@ def analysis():
         # Prepare input data for prediction
         input_data = [A, B, C, D, E, F, G, H, I, J, K, L, M]
 
-        heart_data = pd.read_csv("C:\\Users\\yewal\\Downloads\\heart.csv")
+        heart_data = pd.read_csv(Dataset path)
         feature_names = ['age', 'sex', 'cp', 'trestbps', 'chol', 'fbs', 'restecg', 'thalach', 'exang', 'oldpeak', 'slope', 'ca', 'thal']
         heart_data.columns = feature_names + ['target']
 
@@ -142,7 +142,7 @@ def Info():
     Icon_window.title("Info")
     Icon_window.geometry("700x600+400+100")
     # icon image
-    image_icon = PhotoImage(file="C:\\Users\\yewal\\Downloads\\icon.png")
+    image_icon = PhotoImage(file=Icon image path)
     Icon_window.iconphoto(False, image_icon)
 
     # Heading
@@ -180,7 +180,7 @@ def Clear():
 
 
 ##header section 2
-logo = PhotoImage(file="C:\\Users\\yewal\\Downloads\\header.png")
+logo = PhotoImage(file=Header image path)
 myimage = Label(image=logo, bg=background)
 myimage.place(x=0, y=0)
 
@@ -194,8 +194,8 @@ Label(Heading_entry, text="Date", font="arial 13", bg="#df2d4d", fg=framefg).pla
 Label(Heading_entry, text="Patient Name", font="arial 13", bg="#df2d4d", fg=framefg).place(x=30, y=90)
 Label(Heading_entry, text="Birth Year", font="arial 13", bg="#df2d4d", fg=framefg).place(x=430, y=90)
 
-Entry_image = PhotoImage(file="C:\\Users\\yewal\\Downloads\\Rounded Rectangle 1.png")
-Entry_image2 = PhotoImage(file="C:\\Users\\yewal\\Downloads\\Rounded Rectangle 2.png")
+Entry_image = PhotoImage(file=Rounded Rectangle 1 image path)
+Entry_image2 = PhotoImage(file=Rounded Rectangle 2 image path)
 Label(Heading_entry, image=Entry_image, bg="#df2d4b").place(x=20, y=30)
 Label(Heading_entry, image=Entry_image, bg="#df2d4b").place(x=430, y=30)
 
@@ -283,12 +283,9 @@ def selection5():
         return 0  # Default value
 
 
-cp_combobox = Combobox(Detail_entry,
-                       values=['0=typical angina', '1=atypical angian', '2=non-anginal pain', '3=asymptomatic'],
-                       font="arial 12", state="r", width=11)
+cp_combobox = Combobox(Detail_entry,values=['0=typical angina', '1=atypical angian', '2=non-anginal pain', '3=asymptomatic'],font="arial 12", state="r", width=11)
 restecg_combobox = Combobox(Detail_entry, values=['0', '1', '2'], font="arial 12", state="r", width=11)
-slope_combobox = Combobox(Detail_entry, values=['0=upsloping', '1=flat', '2=downsloping'], font="arial 12", state="r",
-                          width=12)
+slope_combobox = Combobox(Detail_entry, values=['0=upsloping', '1=flat', '2=downsloping'], font="arial 12", state="r", width=12)
 ca_combobox = Combobox(Detail_entry, values=['0', '1', '2', '3', '4'], font="arial 12", state="r", width=14)
 thal_combobox = Combobox(Detail_entry, values=['0', '1', '2', '3'], font="arial 12", state="r", width=14)
 
@@ -321,7 +318,7 @@ oldpeak_entry.place(x=320, y=210)
 
 ###########Report############ 8
 
-square_report_image = PhotoImage(file="C:\\Users\\yewal\\Downloads\\Report.png")
+square_report_image = PhotoImage(file=Report image path)
 report_background = Label(image=square_report_image, bg=background)
 report_background.place(x=1120, y=340)
 
@@ -333,7 +330,7 @@ report.place(x=1130, y=610)
 
 ###########Graph####### 9
 
-graph_image = PhotoImage(file="C:\\Users\\yewal\\Downloads\\graph.png")
+graph_image = PhotoImage(file=graph image path)
 Label(image=graph_image).place(x=600, y=270)
 Label(image=graph_image).place(x=860, y=270)
 Label(image=graph_image).place(x=600, y=500)
@@ -341,15 +338,15 @@ Label(image=graph_image).place(x=860, y=500)
 
 #############Button##########10
 
-analysis_button = PhotoImage(file="C:\\Users\\yewal\\Downloads\\Analysis.png")
+analysis_button = PhotoImage(file=Analysis image path)
 Button(root, image=analysis_button, bd=0, bg=background, cursor='hand2', command=analysis).place(x=1130, y=240)
 
 ##########info button###
-info_button = PhotoImage(file="C:\\Users\\yewal\\Downloads\\info.png")
+info_button = PhotoImage(file=info image path)
 Button(root, image=info_button, bd=0, bg=background, cursor='hand2', command=Info).place(x=10, y=240)
 
 ##########save button###
-save_button = PhotoImage(file="C:\\Users\\yewal\\Downloads\\save.png")
+save_button = PhotoImage(file=save image path)
 Button(root, image=save_button, bd=0, bg=background, cursor='hand2').place(x=1370, y=250)
 
 ##########smoking and non-smoking button#########11
@@ -373,13 +370,13 @@ def changemode():
     print(choice)
 
 
-smoking_icon = PhotoImage(file="C:\\Users\\yewal\\Downloads\\smoker.png")
-non_smoking_icon = PhotoImage(file="C:\\Users\\yewal\\Downloads\\non-smoker.png")
+smoking_icon = PhotoImage(file=smoker image path)
+non_smoking_icon = PhotoImage(file=non-smoker image path)
 mode = Button(root, image=smoking_icon, bg="#dbe0e3", bd=0, cursor="hand2", command=changemode)
 mode.place(x=350, y=495)
 
 ################logout############12
-logout_icon = PhotoImage(file="C:\\Users\\yewal\\Downloads\\logout.png")
+logout_icon = PhotoImage(file=logout image path)
 logout_button = Button(root, image=logout_icon, bg="#df2d4b", cursor='hand2', bd=0, command=logout)
 logout_button.place(x=1390, y=60)
 
