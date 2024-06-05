@@ -115,7 +115,7 @@ label.place(x=500,y=500)
 regis_button=Button(root,text="ADD NEW USER",bg="#455c88",fg="white",width=13,height=1,font=("arial",16,"bold"),bd=0)
 regis_button.place(x=530,y=600)
 
-backbuttonimage=PhotoImage(file="C:\\Users\\yewal\\Downloads\\backbutton.png")
+backbuttonimage=PhotoImage(file=backbutton image path)
 Backbutton=Button(root,image=backbuttonimage,fg="#deeefb")
 Backbutton.place(x=20,y=15)
 root.mainloop()
