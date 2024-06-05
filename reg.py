@@ -23,19 +23,19 @@ def register():
             messagebox.showerror("Entry error", "Type username or password!!")
         else:
             try:
-                mydb = mysql.connector.connect(host='localhost', user='sayali', password="sayali@2911$")
+                mydb = mysql.connector.connect(host='localhost', user='username', password="userpassword")
                 mycursor = mydb.cursor()
                 print("Connected to database!!")
             except:
                 messagebox.showerror("Connection", "Database connection not established")
             try:
-                command = "use htregistration"
+                command = "use databasename which was created in login page"
                 mycursor.execute(command)
                 command = "create table login(user int auto_increment key not null,Username varchar(50),Password(100))"
                 mycursor.execute(command)
             except:
-                mycursor.execute("use registration")
-                mydb=mysql.connector.connect(host="localhost",user="sayali",password="sayali@2911$",database="htregistration")
+                mycursor.execute("use databasename which was created in login page")
+                mydb=mysql.connector.connect(host="localhost",user="username",password="userpassword",database="databasename which was created in login page")
                 mycursor=mydb.cursor()
                 command="insert into login(Username,Password) values(%s,%s)"
                 mycursor.execute(command,(username,password))
@@ -47,14 +47,14 @@ def register():
 def login():
     pass
 #icon image
-image_icon=PhotoImage(file="C:\\Users\\yewal\\Downloads\\icon.png")
+image_icon=PhotoImage(file=icon image path)
 root.iconphoto(False,image_icon)
 
 #Background image
 frame=Frame(root,bg="red")
 frame.pack(fill=Y)
 
-backgroundimage=PhotoImage(file="C:\\Users\\yewal\\Downloads\\register.png")
+backgroundimage=PhotoImage(file=rregister image path)
 Label(frame,image=backgroundimage).pack()
 
 adminaccess=Entry(frame,width=15,fg="#000",border=0,bg="#e8ecf7",font=("Arial Bold",20))
@@ -102,8 +102,8 @@ def hide():
         eyebutton.config(image=openeye,activebackground="white")
         code.config(show="")
         button_mode=True
-openeye=PhotoImage(file="C:\\Users\\yewal\\Downloads\\openeye.png")
-closeeye=PhotoImage(file="C:\\Users\\yewal\\Downloads\\close eye.png")
+openeye=PhotoImage(file=Openeye image path)
+closeeye=PhotoImage(file=closeeye image path)
 eyebutton=Button(frame,image=openeye,bg="#375174",bd=0,command=hide)
 eyebutton.place(x=780,y=470)
 
