@@ -10,7 +10,7 @@ import warnings
 warnings.filterwarnings("ignore", message="X does not have valid feature names")
 
 
-heart_data = pd.read_csv("C:\\Users\\yewal\\Downloads\\heart.csv")
+heart_data = pd.read_csv(Heart CSV path)
 
 print(heart_data.hist())
 print(heart_data.head())
