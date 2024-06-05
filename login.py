@@ -25,11 +25,11 @@ def loginuser():
     else:
         mycursor = None  # Initialize mycursor here
         try:
-            mydb = mysql.connector.connect(host='localhost', user='sayali', password="sayali@2911$", database="htregistration")
+            mydb = mysql.connector.connect(host='localhost', user=username, password=userpassword, database=databasename)
             mycursor = mydb.cursor()
             print("Connected to database!!")
 
-            command = "use htregistration"
+            command = "use databasename"
             mycursor.execute(command)
 
             command = "select * from login where Username=%s and Password=%s"
@@ -56,14 +56,14 @@ root.config(bg=background)
 root.resizable(False, False)
 
 # Icon image
-image_icon = PhotoImage(file="C:\\Users\\yewal\\Downloads\\icon (1).png")
+image_icon = PhotoImage(file=icon image path)
 root.iconphoto(False, image_icon)
 
 # Background image
 frame = Frame(root, bg="red")  # Fix typo here, should be `frame`, not `Frame`
 frame.pack(fill=Y)
 
-backgroundimage = PhotoImage(file="C:\\Users\\yewal\\Downloads\\LOGIN.png")
+backgroundimage = PhotoImage(file=login image path)
 Label(frame, image=backgroundimage).pack()  # Fix typo here, should be `frame`, not `Frame`
 
 ####user entry
@@ -108,8 +108,8 @@ def hide():
         eyebutton.config(image=openeye,activebackground="white")
         code.config(show="")
         button_mode=True
-openeye=PhotoImage(file="C:\\Users\\yewal\\Downloads\\openeye.png")
-closeeye=PhotoImage(file="C:\\Users\\yewal\\Downloads\\close eye.png")
+openeye=PhotoImage(file=openeye image path)
+closeeye=PhotoImage(file=closeeye image path)
 eyebutton=Button(frame,image=openeye,bg="#375174",bd=0,command=hide)
 eyebutton.place(x=780,y=410)
 
